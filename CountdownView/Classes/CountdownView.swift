@@ -392,13 +392,13 @@ public class CountdownView: UIView {
     // MARK: Actions
     
     @objc fileprivate func didTapCloseButton() {
-        CountdownView.hide(animation: dismissStyleAnimation, options: (duration: 0.5, delay: 0), completion: currentCompletion)
+        CountdownView.hide(animation: dismissStyleAnimation, options: (duration: 0.5, delay: 0), completion: nil)
         CountdownView.shared.currentCompletion = nil
         CountdownView.shared.timedTask.cancel()
     }
     
     @objc fileprivate func didTapBackgroundView() {
-        CountdownView.hide(animation: dismissStyleAnimation, options: (duration: 0.5, delay: 0), completion: currentCompletion)
+        CountdownView.hide(animation: dismissStyleAnimation, options: (duration: 0.5, delay: 0), completion: nil)
         CountdownView.shared.currentCompletion = nil
         CountdownView.shared.timedTask.cancel()
     }
